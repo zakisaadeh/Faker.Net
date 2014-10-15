@@ -20,6 +20,17 @@ namespace Faker
             return MAJOR_ADJ.Rand() + " " + MAJOR_NOUN.Rand();
         }
 
+        public static string GetCourseAbbreviation()
+        {
+            return COURSE_ABRV.Rand() + " " + FakerRandom.Rand.Next(500);
+        }
+
+        public static string GetCourseName()
+        {
+            return COURSE_NAME.Rand();
+        }
+
+
         public static string GetSchoolName()
         {
             return SCHOOL_PREFIX.Rand() + SCHOOL_SUFFIX.Rand();
@@ -93,5 +104,13 @@ namespace Faker
         static readonly string[] SCHOOL_ADJ = new[] { "International", "Global", "Polytechnic", "National" };
         static readonly string[] SCHOOL_TYPE = new[] { "School", "University", "College", "Institution", "Academy" };
         static readonly string[] SCHOOL_UNI = new[] { "University", "College" };
+
+        private static readonly string[] COURSE_ABRV = new[] {"ME", "CS", "CHE", "PHY", "COM","EE","PE","E","ARA","FRE","GER","HIS","BIO","ECO","FIN"};
+        private static readonly string[] COURSE_NAME = new[] {"Thermodynamics","Statics","Dynamics","Fluid Mechanics","Mechanics of Solids","Mechatronics","Heat Transfer",
+            "Engineering Finance","Dynamic Systems and Controls","Machine Elements", "Mechanics of Solids", "Reservoir Engineering", "Petrophysics",
+            "Drilling and Well Completions", "Reservoir Geomechanics", "Production Technology and Design", "Fundamentals of Well Logging", "Organic Chemistry",
+            "Physical Chemistry", "Chemical Engineering Materials", "Seperation Process", "Data Structures", "Computer Organization and Architecture",
+            "Algorithms and Complexity","Discrete Math", "Principles of Computer Science", "Software Systems", "Robotics", "Programming Languages",
+            "Data Management", "Operating Systems","Game Technology", "Theory of Computation","Computer Networks", "Mobile Computing"};
     }
 }
